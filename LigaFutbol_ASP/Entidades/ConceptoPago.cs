@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entidades
+{
+    public class ConceptoPago
+    {
+        [Key]
+        public int IdConceptoPago { get; set; }
+        public String Concepto { get; set; }
+        public Decimal Monto { get; set; }
+        public String Moneda { get; set; }
+        public Boolean Estado { get; set; }
+
+        public ICollection<Liga> Ligas { get; set; }
+
+        public class map
+        {
+            public map(ref DbModelBuilder modelBuilder)
+            {
+                modelBuilder.Entity<ConceptoPago>().Property(x => x.Concepto).IsRequired();
+                modelBuilder.Entity<ConceptoPago>().Property(x => x.Moneda).IsRequired();
+
+            }
+        }
+    }
+}
