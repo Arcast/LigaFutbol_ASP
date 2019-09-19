@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
@@ -27,18 +28,6 @@ namespace Entidades
         public ConceptoPago ConceptoPago { get; set; }
         public ICollection<Campeonato> Campeonato { get; set; }
 
-        public class map
-        {
-            public map(ref DbModelBuilder modelBuilder)
-            {
-
-                modelBuilder.Entity<Liga>().Property(x => x.CodigoLiga).IsRequired();
-                modelBuilder.Entity<Liga>().Property(x => x.NombreLiga).IsRequired();
-
-                modelBuilder.Entity<Liga>().Property(x => x.NombreLiga).HasMaxLength(250);
-                modelBuilder.Entity<Liga>().Property(x => x.Descripcion).HasMaxLength(2500);
-
-            }
-        }
+    
     }
 }

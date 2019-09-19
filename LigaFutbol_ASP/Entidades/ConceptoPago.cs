@@ -19,14 +19,6 @@ namespace Entidades
 
         public ICollection<Liga> Ligas { get; set; }
 
-        public class map
-        {
-            public map(ref DbModelBuilder modelBuilder)
-            {
-                modelBuilder.Entity<ConceptoPago>().Property(x => x.Concepto).IsRequired();
-                modelBuilder.Entity<ConceptoPago>().Property(x => x.Moneda).IsRequired();
-
-            }
-        }
+       
     }
 }

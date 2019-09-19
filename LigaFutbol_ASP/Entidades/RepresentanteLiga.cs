@@ -22,14 +22,6 @@ namespace Entidades
 
         public ICollection<Liga> Ligas { get; set; }
 
-        public class map
-        {
-            public map(ref DbModelBuilder modelBuilder)
-            {
-                modelBuilder.Entity<RepresentanteLiga>().Property(x => x.Nombres).HasMaxLength(250);
-                modelBuilder.Entity<RepresentanteLiga>().Property(x => x.Apellidos).HasMaxLength(250);
-                modelBuilder.Entity<RepresentanteLiga>().Property(x => x.Direccion).HasMaxLength(2500);
-            }
-        }
+      
     }
 }

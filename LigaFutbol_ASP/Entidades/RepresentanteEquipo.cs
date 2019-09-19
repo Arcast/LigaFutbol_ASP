@@ -1,26 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Arbitro
+   public class RepresentanteEquipo
     {
         [Key]
-        public int IdArbitro { get; set; }
-        [Required(ErrorMessage = "nombre del arbitro es requerido")]
+        public int IdRepresentanteEquipo { get; set; }
         public String Nombres { get; set; }
         public String Apellidos { get; set; }
         public String Cedula { get; set; }
         public int Telefono { get; set; }
-        public String Direccion { get; set; }
 
-        public ICollection<Liga> Ligas { get; set; }
+        public Equipo Equipo { get; set; }
 
-       
     }
 }

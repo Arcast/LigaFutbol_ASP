@@ -23,13 +23,7 @@ namespace Entidades
         public Convocatoria Convocatoria { get; set; }
         public Categoria Categoria { get; set; }
         public ConfiguracionCampeonato ConfiguracionCampeonato { get; set; }
-        public class map
-        {
-            public map(ref DbModelBuilder modelBuilder)
-            {
-                modelBuilder.Entity<Campeonato>().Property(x => x.NombreCampeonato).IsRequired();
-                modelBuilder.Entity<Campeonato>().Property(x => x.Descripcion).HasMaxLength(2500);
-            }
-        }
+
+      
     }
 }
