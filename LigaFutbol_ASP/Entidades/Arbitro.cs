@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentValidation.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
@@ -8,16 +9,17 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    [Validator(typeof(ArbitroValidator))]
     public class Arbitro
     {
         [Key]
         public int IdArbitro { get; set; }
-        [Required(ErrorMessage = "nombre del arbitro es requerido")]
-        public String Nombres { get; set; }
-        public String Apellidos { get; set; }
-        public String Cedula { get; set; }
+        //[Required(ErrorMessage = "nombre del arbitro es requerido")]
+        public string Nombres { get; set; }
+        public string Apellidos { get; set; }
+        public string Cedula { get; set; }
         public int Telefono { get; set; }
-        public String Direccion { get; set; }
+        public string Direccion { get; set; }
 
         public ICollection<Liga> Ligas { get; set; }
 
