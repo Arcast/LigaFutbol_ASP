@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades
+namespace DatosDAL.Modelo
 {
     [Validator(typeof(ArbitroValidator))]
     public class Arbitro
     {
         [Key]
         public int IdArbitro { get; set; }
-        //[Required(ErrorMessage = "nombre del arbitro es requerido")]
+        [Required(ErrorMessage = "nombre del arbitro es requerido")]
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string Cedula { get; set; }

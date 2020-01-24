@@ -5,19 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades
+namespace DatosDAL.Modelo
 {
-   public class DetalleTarjeta
+    public class AsistenciaPartido
     {
         [Key]
-        public int IdDetalleTarjeta { get; set; }
-        [Required]
+        public int IdAsistencia { get; set; }
         public int IdJugador { get; set; }
-        [Required(ErrorMessage = "Seleccione el tipo de tarjeta")]
-        public String TipoTarjeta { get; set; }
-        public DateTime Hora { get; set; }
-
+        public Boolean PartidoDisputado { get; set; }
         public ICollection<Enfrentamiento> Enfrentamientos { get; set; }
-
+        
     }
 }

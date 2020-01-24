@@ -1,27 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades
+namespace DatosDAL.Modelo
 {
-    public class RepresentanteLiga
+   public class RepresentanteEquipo
     {
         [Key]
-        public int IdRepresentante { get; set; }
-        [Required(ErrorMessage = "Nombre del representante es requerido")]
+        public int IdRepresentanteEquipo { get; set; }
         public String Nombres { get; set; }
         public String Apellidos { get; set; }
         public String Cedula { get; set; }
-        public String Direccion { get; set; }
         public int Telefono { get; set; }
-        public String Puesto { get; set; }
 
-        public ICollection<Liga> Ligas { get; set; }
+        public Equipo Equipo { get; set; }
 
-      
     }
 }

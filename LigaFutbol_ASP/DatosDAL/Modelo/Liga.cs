@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades
+namespace DatosDAL.Modelo
 {
     public class Liga
     {
@@ -28,6 +28,6 @@ namespace Entidades
         public ConceptoPago ConceptoPago { get; set; }
         public ICollection<Campeonato> Campeonato { get; set; }
 
-    
+       
     }
 }

@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Entidades
+namespace DatosDAL
 {
-    public class ArbitroValidator : AbstractValidator<Arbitro>
+    public class ArbitroValidator : AbstractValidator<Modelo.Arbitro>
     {
         public ArbitroValidator()
         {
